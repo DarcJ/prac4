@@ -25,16 +25,17 @@ int Reverse::reverseDigit(int value){
 }
 std::string Reverse::reverseString(std::string letters){
     int l = letters.size();
-    if (l > 0)
+    if (l == 0)
+    {
+        std::cout << "Invalid string!\n";
+        return letters;
+    }
+    else if (l > 0)
     {
         rString = rString + letters[l-1];
         reverseString(letters.substr(0, l-1));
     }
-    else
-    {
-        return rString;
-    }
-    
+
     return rString;
 
 }
