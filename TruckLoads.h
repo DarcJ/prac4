@@ -1,8 +1,8 @@
-class TruckLoads
+class Truckloads
 {
 private:
     /* data */
 public:
-    TruckLoads(/* args */);
-    ~TruckLoads();
+    Truckloads(/* args */);
+    ~Truckloads();
 };
