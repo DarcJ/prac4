@@ -14,11 +14,11 @@ int Reverse::reverseDigit(int value){
     }
     else if (value < 0)
     {
-        return value;
+        return rvalue;
     }
     else
     {
-        return value;
+        return rvalue;
     }
 
     return rValue;
