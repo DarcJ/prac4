@@ -12,10 +12,18 @@ int Reverse::reverseDigit(int value){
         rValue = (rValue * 10) + intm;
         reverseDigit(value/10);
     }
-    else{
+    else if (value < 0)
+    {
+        value = - value;
+        intm = value % 10;
+        rValue = (rValue * 10) + intm;
+        reverseDigit(value/10); 
+    }
+    else
+    {
         return value;
     }
-    
+
     return rValue;
 }
 std::string Reverse::reverseString(std::string letters){
