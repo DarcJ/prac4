@@ -14,10 +14,7 @@ int Reverse::reverseDigit(int value){
     }
     else if (value < 0)
     {
-        value = - value;
-        intm = value % 10;
-        rValue = (rValue * 10) + intm;
-        reverseDigit(value/10); 
+        return value;
     }
     else
     {
