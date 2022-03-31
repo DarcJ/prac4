@@ -1,8 +1,9 @@
 class Truckloads
 {
 private:
-    /* data */
+    int trucks;
 public:
-    Truckloads(/* args */);
+    Truckloads();
+    int numTrucks(int numCrates, int loadSize);
     ~Truckloads();
 };
