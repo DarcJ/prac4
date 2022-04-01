@@ -12,7 +12,7 @@ int Reverse::reverseDigit(int value){
         rValue = (rValue * 10) + intm;
         reverseDigit(value/10);
     }
-    else if (value < 0)
+    else if (value <= 0)
     {
         return value;
     }
