@@ -20,7 +20,7 @@ int Reverse::reverseDigit(int value){
 }
 std::string Reverse::reverseString(std::string letters){
     int l = letters.size();
-    if (l <= 0)
+    if (l == 0)
     {
         return;
     }
