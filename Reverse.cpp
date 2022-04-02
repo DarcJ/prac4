@@ -8,7 +8,7 @@ Reverse::Reverse()
 int Reverse::reverseDigit(int value){
     if (value <= 0)
     {
-        return;
+        return -1;
     }
     else if (value > 0)
     {
@@ -22,7 +22,8 @@ std::string Reverse::reverseString(std::string letters){
     int l = letters.size();
     if (l == 0)
     {
-        return;
+        
+        return "ERROR";
     }
     else if (l > 0)
     {
