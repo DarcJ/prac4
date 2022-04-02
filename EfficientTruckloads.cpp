@@ -5,42 +5,38 @@ using namespace std;
 vector<int> lookupTable;
  
 
-Truckloads::Truckloads()
+EfficientTruckloads::EfficientTruckloads()
 {
-    trucks = 0;
+
 }
-int Truckloads::numTrucks(int numCrates, int loadSize){
+int EfficientTruckloads::numTrucks(int numCrates, int loadSize){
     
     if (numCrates <= 0 || loadSize <= 0)
     {
-        return trucks;
+        return;
     }
     if (numCrates <= loadSize)
     {
-        trucks++;
-        //lookupTable[numCrates] = trucks;
+        lookupTable[numCrates] = 1;
     }
     else if (numCrates > loadSize)
     {
-        //if (lookupTable.at(n) //not error/empty)
-       // {
-        //    next = lookupTable.at(n);
-        //    nextNext = lookupTable.at
-       // }
-        else if (numCrates%2 == 0) //i.e. even division with no remainder
+        if (numCrates%2 == 0) //i.e. even division with no remainder
         {
+            lookupTable[numCrates] = lookupTable[numCrates/2]+lookupTable[numCrates/2];
             numTrucks(numCrates/2, loadSize);
             numTrucks(numCrates/2, loadSize);
         }
         else
         {
+            lookupTable[numCrates] = lookupTable[numCrates/2]+lookupTable[(numCrates+1)/2];
             numTrucks(numCrates/2, loadSize);
             numTrucks((numCrates+1)/2, loadSize);
         }
     }
-    return trucks;
+    return lookupTable[numCrates];
 }
 
-Truckloads::~Truckloads()
+EfficientTruckloads::~EfficientTruckloads()
 {
 }
