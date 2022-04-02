@@ -6,10 +6,15 @@ Reverse::Reverse()
     intm = 0;
 }
 int Reverse::reverseDigit(int value){
-    if (value <= 0)
+    if (value == 0)
     {
         return value;
     }
+    else if (value < 0)
+    {
+        return -1;
+    }
+    
     else if (value > 0)
     {
         intm = value % 10;
