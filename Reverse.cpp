@@ -6,28 +6,23 @@ Reverse::Reverse()
     intm = 0;
 }
 int Reverse::reverseDigit(int value){
-    if (value > 0)
+    if (value <= 0)
+    {
+        return;
+    }
+    else if (value > 0)
     {
         intm = value % 10;
         rValue = (rValue * 10) + intm;
         reverseDigit(value/10);
     }
-    else if (value <= 0)
-    {
-        return value;
-    }
-    else
-    {
-        return value;
-    }
-
     return rValue;
 }
 std::string Reverse::reverseString(std::string letters){
     int l = letters.size();
-    if (l == 0)
+    if (l <= 0)
     {
-        return letters;
+        return;
     }
     else if (l > 0)
     {
