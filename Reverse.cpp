@@ -8,7 +8,7 @@ Reverse::Reverse()
 int Reverse::reverseDigit(int value){
     if (value <= 0)
     {
-        return -1;
+        return;
     }
     else if (value > 0)
     {
