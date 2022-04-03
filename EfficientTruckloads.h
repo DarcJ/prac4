@@ -5,7 +5,6 @@
 class EfficientTruckloads
 {
 private:
-    int trucks;
     std::vector<int> lookupTable;
 public:
     EfficientTruckloads();

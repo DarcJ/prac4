@@ -6,7 +6,6 @@ using namespace std;
 
 EfficientTruckloads::EfficientTruckloads()
 {
-    trucks = 0;
 }
 int EfficientTruckloads::numTrucks(int numCrates, int loadSize){
     
@@ -17,7 +16,7 @@ int EfficientTruckloads::numTrucks(int numCrates, int loadSize){
 
     if (numCrates <= 0 || loadSize <= 0)
     {
-        return lookupTable.at(numCrates);
+        return 0;
     }
     
     if (lookupTable.at(numCrates) != 0)
